@@ -1,0 +1,10 @@
+{
+	"id" : "gcast",
+	"name" : "Gcast",
+	"description" : "Plugin simple de gestion de cast, et permet la notif vocale",
+	"licence" : "AGPL",
+	"author" : "Ludovic SARAKHA",
+	"require" : "3.0",
+	"category" : "communication"
+	
+}
