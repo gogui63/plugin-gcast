@@ -33,5 +33,5 @@ $parameters['plugin'] = 'gcast';
 $reply = interactQuery::tryToReply(trim($query), $parameters);
 log::add('gcast', 'debug', 'Interaction ' . print_r($reply, true));
 $parlecmd = $eqLogic->getCmd(null,'parle');
-$parlecmd->execCmd(array('message' => $reply['reply']));
+$parlecmd->execCmd(array('message' => str_replace(array('[',']') , ' ', $reply['reply'])));
 die();
