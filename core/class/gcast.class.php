@@ -112,6 +112,15 @@ class gcastCmd extends cmd {
 					$options=$gcast->getConfiguration('googlevoice','fr');
 				}
 				$cmd = '/usr/bin/python ' .dirname(__FILE__) . '/../../resources/action.py ' . $action . ' ' . $ip . ' "'.$tts.'" "'.$jeedompath.'" ' . $options . ' ' . $moteur;
+		} else if ($action == 'volume') {
+			if ($_options['slider'] < 0) {
+				$_options['slider'] = 0;
+			}
+			if ($_options['slider'] > 100) {
+				$_options['slider'] = 100;
+			}
+			$volume=$_options['slider']/100;
+			$cmd = '/usr/bin/python ' .dirname(__FILE__) . '/../../resources/action.py ' . $action . ' ' . $ip . ' ' . $volume;
 		} else {
 			$cmd = '/usr/bin/python ' .dirname(__FILE__) . '/../../resources/action.py ' . $action . ' ' . $ip;
 		}
