@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re, requests, warnings
 from six.moves import urllib
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from gtts_token.gtts_token import Token
 
 class gTTS:
@@ -131,7 +130,7 @@ class gTTS:
                 # Disable requests' ssl verify to accomodate certain proxies and firewalls
                 # Filter out urllib3's insecure warnings. We can live without ssl verify here
                 with warnings.catch_warnings():
-                    warnings.filterwarnings("ignore", category=InsecureRequestWarning)
+                    warnings.filterwarnings("ignore")
                     r = requests.get(self.GOOGLE_TTS_URL,
                                      params=payload,
                                      headers=headers,
