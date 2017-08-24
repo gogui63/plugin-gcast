@@ -30,6 +30,11 @@ if (!is_object($eqLogic)) {
 $query = utf8_encode(init('query'));
 log::add('gcast', 'debug', 'Demande reçu ' . $query);
 $parameters['plugin'] = 'gcast';
+$cmd = $eqLogic->getCmd(null, 'parle');
+if (is_object($cmd) && $cmd->askResponse($query)) {
+	log::add('gcast', 'debug', 'Répondu à un ask en cours');
+	die();
+}
 $reply = interactQuery::tryToReply(trim($query), $parameters);
 log::add('gcast', 'debug', 'Interaction ' . print_r($reply, true));
 $parlecmd = $eqLogic->getCmd(null,'parle');
