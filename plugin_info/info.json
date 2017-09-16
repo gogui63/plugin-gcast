@@ -6,5 +6,6 @@
 	"author" : "Ludovic SARAKHA",
 	"require" : "3.0",
 	"category" : "communication"
-	
+	"changelog" : "https://github.com/jeedom/plugin-gcast/blob/stable/doc/#language#/changelog.asciidoc",
+	"documentation" : "https://github.com/jeedom/plugin-gcast/blob/stable/doc/#language#/index.asciidoc"
 }
