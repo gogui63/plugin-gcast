@@ -74,7 +74,7 @@ class CCMediaController():
             if host is None:
                 sys.exit("No Chromecast found on the network")
                 
-            print "device name:", name.encode('utf-8')   
+            print "device name:", name    
             
         return host
         

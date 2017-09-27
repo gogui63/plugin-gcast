@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python
 """
 stream2chromecast.py: Chromecast media streamer for Linux
 
